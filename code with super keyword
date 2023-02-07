@@ -1,0 +1,35 @@
+//inheritance
+
+class parent  // main class
+{
+    walking()  //method 1
+    {
+        console.log("parent is walking");
+    }
+    talking()  // method 2
+    {
+        console.log("We are talking");
+    }
+}
+
+class child extends parent  // this is inheritance concept...
+{
+    crying()
+    {
+        console.log("do not cry")
+    }
+    walking()
+    {
+        super.walking();   // searching for walking method from "top to bottom"...
+        console.log("child is walking");
+    }
+
+}
+
+let chintu = new child();
+chintu.walking(); // working:- finding walking() method from "bottom to top"....
+
+//let Amit_sir = new parent();
+//Amit_sir.talking();
+
+
